@@ -1,0 +1,22 @@
+.scroll_container {
+	position: fixed;
+	top: 50vh;
+	left: 0;
+	width: 100vw;
+	transform: translateY(-50%);
+	pointer-events: none;
+	z-index: 0
+}
+
+.scroll_line {
+	position: relative;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.scroll_text {
+	display: inline-block;
+	font-size: 5em;
+	transition: all 0.5s;
+}

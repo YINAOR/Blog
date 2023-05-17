@@ -1,0 +1,84 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+	padding: 4rem 0;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+@media screen and (max-width: 966px) {
+	.heroBanner {
+		padding: 2rem;
+	}
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.features {
+	display: flex;
+	align-items: center;
+	padding: 2rem 0;
+	width: 100%;
+}
+
+.featureImage {
+	height: 200px;
+	width: 200px;
+}
+
+.warpper {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+.background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.wrap {
+	width: 100%;
+	height: 100vh;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+}
+.contentTitle {
+	font: 200 6vw/1 'Comic Sans MS', 'Helvetica Neue', 'Microsoft Yahei', 'Microsoft Yahei', -apple-system, sans-serif;
+	color: #fff;
+	line-height: 1;
+	animation: whiteShadow 1.5s ease-in-out infinite alternate;
+	text-shadow: #452d2d 0 0 1px, #fffffb 0 0 1px, #fffffb 0 0 2px;
+	user-select: none;
+}
+@media screen and (max-width: 50em) {
+	.contentTitle {
+		font-size: 2em;
+	}
+}
+@keyframes whiteShadow {
+	0% {
+		text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #333, 0 0 8px #333, 0 0 9px #333, 0 0 10px #333, 0 0 15px #333;
+	}
+	to {
+		text-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 1.5px #fff, 0 0 2px #333, 0 0 4px #333, 0 0 5px #333, 0 0 6px #333, 0 0 8px #333;
+	}
+}
