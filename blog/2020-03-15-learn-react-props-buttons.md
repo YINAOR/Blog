@@ -12,6 +12,7 @@ oid: "96612743"
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import BVideo from "@site/src/components/BVideo";
 
 <!-- [B 站视频 - 点击传送](https://www.bilibili.com/video/av93748753/) -->
 
@@ -22,6 +23,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 上一张效果图：
 
 <img alt="" src={useBaseUrl('img/2020-03-15-learn-react-props-buttons/2020-03-15-19-02-33.png')} />
+
+## 视频
+
+<BVideo src="//player.bilibili.com/player.html?aid=96612743&cid=164934942&page=1" bsrc="https://www.bilibili.com/video/av96612743/"/>
 
 ## 创建 React 工程
 

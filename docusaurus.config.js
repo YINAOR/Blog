@@ -75,12 +75,16 @@ const config = {
 					activeBasePath: 'docs',
 					items: [
 						{
-							label: '技术视频',
-							to: 'docs/videos/'
+							label: '前端',
+							to: 'docs/front/'
 						},
 						{
-							label: 'CSS 完全指南',
-							to: 'docs/css/css-tutorial-intro'
+							label: '后端',
+							to: 'docs/back/'
+						},
+						{
+							label: '算法',
+							to: 'docs/algorithm/'
 						},
 						{
 							label: '资源导航',
@@ -134,10 +138,10 @@ const config = {
 					// editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
 					remarkPlugins: [import('remark-math')],
 					rehypePlugins: [import('rehype-katex')],
-					showLastUpdateTime: true
+					showLastUpdateTime: false
 				},
 				blog: {
-					showReadingTime: false,
+					showReadingTime: true,
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
 					// editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'

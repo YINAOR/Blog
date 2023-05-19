@@ -1,23 +1,16 @@
 import React from 'react'
 
 import { useTrail, animated } from 'react-spring'
-import Translate, { translate } from '@docusaurus/Translate'
+import Translate from '@docusaurus/Translate'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Link from '@docusaurus/Link'
 
-import Button from '../Button'
-
 import HeroMain from './hero_main.svg'
-import BilibiliIcon from '@site/static/icons/bilibili.svg'
-import CSDNIcon from '@site/static/icons/csdn.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub, faWeixin } from '@fortawesome/free-brands-svg-icons'
+import { faWeixin } from '@fortawesome/free-brands-svg-icons'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
-import useFollowers from './useFollowers'
-
 import styles from './styles.module.css'
-import { NameWrapper } from './style'
 
 function Hero() {
 	const {
@@ -25,17 +18,14 @@ function Hero() {
 		i18n: { currentLocale }
 	} = useDocusaurusContext()
 
-	// Get followers
-	const followers = useFollowers()
-
 	// animation
-	const animatedTexts = useTrail(5, {
+	const animatedTexts = useTrail(4, {
 		from: { opacity: 0, transform: 'translateY(3em)' },
 		to: { opacity: 1, transform: 'translateY(0)' },
 		config: {
-			mass: 3,
-			friction: 45,
-			tension: 460
+			mass: 3, // 弹簧质量，即：与动画的加速度有关，mass的值越大，动画执行的速度也会随着执行的时间越变越大
+			friction: 45, // 摩擦力(阻力)，即动画执行时的反向加速度，可以与mass、tension的效果相互抵消
+			tension: 460 // 弹簧张力，影响整体速度，即：动画在有一个点向下一个点运动时，递增的步长(受张力影响)如果过大，就会一下子超过范围，在下一点回来时又会距离终点较远，导致在同一点周围来回运动，即使是线性运动的过渡效果，设置tension之后可以实现曲线运动
 		}
 	})
 
@@ -57,21 +47,18 @@ function Hero() {
 								<span className={styles.name_text}>( $ _ $ )</span>
 							</span>
 						</div>
-						{/* <Translate description="my name">
-							<div className="name"></div>
-						</Translate> */}
 					</span>
 				</animated.div>
 				<animated.p style={animatedTexts[1]}>
 					<Translate description="my introduction">一个立志成为全栈的前端开发工程师</Translate>
 				</animated.p>
-				<animated.p style={animatedTexts[1]}>
+				<animated.p style={animatedTexts[2]}>
 					<Translate
 						id="homepage.hero.text"
 						description="hero text"
 						values={{
 							bilibiliText: (
-								<Link to="/docs/videos">
+								<Link to="/docs/front">
 									<Translate id="hompage.hero.text.bilibili" description="Bilibili docs link label">
 										大佬技术视频教程、
 									</Translate>
@@ -111,7 +98,6 @@ function Hero() {
 }
 
 function SocialLinks({ animatedProps, ...props }) {
-	// const { isDarkTheme } = useThemeContext();
 	return (
 		<animated.div className={styles.social__links} style={animatedProps}>
 			{/* <a href="https://space.bilibili.com/302954484">

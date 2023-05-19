@@ -1,8 +1,12 @@
 ---
-id: react-docusaurus-blog-list-view
+slug: react-docusaurus-blog-list-view
 title: React + Docusaurus 博客列表视图实现
-slug: ../react-docusaurus-blog-list-view
+author: 峰华
+author_title: 前端工程师 / B站UP主
+author_url: https://github.com/zxuqian
+author_image_url: https://tvax3.sinaimg.cn/crop.0.0.1080.1080.180/b2745d44ly8g8s4muqeggj20u00u0n0k.jpg?KID=imgbed,tva&Expires=1582389585&ssig=EvXmyu%2FXsX
 description: 网站之前加上了列表视图，方便快速查找文章，这个视频整理了制作过程，网站代码是开源的，可以结合视频理解（非常非常简单！）。
+tags: [前端, React]
 keywords:
   - react
   - docusaurus

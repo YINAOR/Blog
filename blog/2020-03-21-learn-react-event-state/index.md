@@ -5,13 +5,15 @@ author: 峰华
 author_title: 前端工程师 / B站UP主
 author_url: https://github.com/zxuqian
 author_image_url: https://tvax3.sinaimg.cn/crop.0.0.1080.1080.180/b2745d44ly8g8s4muqeggj20u00u0n0k.jpg?KID=imgbed,tva&Expires=1582389585&ssig=EvXmyu%2FXsX
-description: Hello! 今天来带你走进 React 的大门！我第一次听说 React 是我在美国读研的时候，室友选了 web programming 这节课，然后遇到了关于 react 的好多问题...
+description: Hello, 今天教你写一个渐变背景生成器。我会用这个例子来解释 react 的 state，状态管理，还有事件处理。这个小工具提供了两个颜色选择器，分别可以选择渐变的两个颜色，渐变的角度是 75 度，线性渐变。另外还有一个重置按钮可以把渐变恢复成初始值。
 tags: [前端, React]
 bvid: av97436637
 oid: "97436637"
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import GradientDemo from "./Gradient";
+import BVideo from "@site/src/components/BVideo";
 
 Hello, 今天教你写一个渐变背景生成器。我会用这个例子来解释 react 的 state，状态管理，还有事件处理。这个小工具提供了两个颜色选择器，分别可以选择渐变的两个颜色，渐变的角度是 75 度，线性渐变。另外还有一个重置按钮可以把渐变恢复成初始值。
 
@@ -19,7 +21,13 @@ Hello, 今天教你写一个渐变背景生成器。我会用这个例子来解�
 
 [源码：Github - React-Examples](https://github.com/zxuqian/react-examples)
 
-[示例和视频](../docs/videos/react/react-state-event-exmaple)
+## 效果
+
+<GradientDemo />
+
+## 视频
+
+<BVideo src="//player.bilibili.com/player.html?aid=97436637&cid=166340357&page=1" bsrc="https://www.bilibili.com/video/av97436637/"/>
 
 ## State 简介
 

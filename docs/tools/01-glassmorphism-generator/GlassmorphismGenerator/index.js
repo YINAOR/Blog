@@ -99,7 +99,6 @@ function GlassmorphismGenerator() {
               onChange={(e) => setColor(e.target.value)}
             />
           </div>
-          <Link to="/docs/videos/effects/css-glassmorphism">查看教程</Link>{" "}
           <Link to="https://codesandbox.io/s/css-glassmorphism-49kn8">
             查看示例
           </Link>

@@ -6,6 +6,7 @@
  */
 
 import React, { useEffect } from 'react'
+import { BlogPostProvider, useBlogPost } from '@docusaurus/theme-common/internal'
 
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Layout from '@theme/Layout'
@@ -109,7 +110,7 @@ function BlogListPage(props) {
 												repeatNum: 2
 											},
 											{
-												text: 'Code & Input & Output ',
+												text: 'Code & Input & Output & ',
 												isltr: true
 											},
 											{
@@ -122,14 +123,16 @@ function BlogListPage(props) {
 								{!isLifestyle && isCardView && (
 									<div className="bloghome__posts-card">
 										{items.map(({ content: BlogPostContent }, index) => (
-											<BlogPostItem
-												key={BlogPostContent.metadata.permalink}
-												frontMatter={BlogPostContent.frontMatter}
-												metadata={BlogPostContent.metadata}
-												truncated
-											>
-												<BlogPostContent />
-											</BlogPostItem>
+											<BlogPostProvider content={BlogPostContent}>
+												<BlogPostItem
+													key={BlogPostContent.metadata.permalink}
+													frontMatter={BlogPostContent.frontMatter}
+													metadata={BlogPostContent.metadata}
+													truncated
+												>
+													<BlogPostContent />
+												</BlogPostItem>
+											</BlogPostProvider>
 										))}
 									</div>
 								)}
