@@ -140,7 +140,7 @@ function BlogPostItem(props) {
 						{/* 标题 */}
 						{renderPostHeader()}
 						{/* 作者 */}
-						{/* <BlogPostItemHeaderAuthors /> */}
+						<BlogPostItemHeaderAuthors />
 						{/* 列表页标签 */}
 						{!isBlogPostPage && renderTags()}
 						{/* 发布日期与阅读时间 */}

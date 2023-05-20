@@ -1,0 +1,8 @@
+.custom-aplayer .aplayer {
+	margin: 0;
+	margin-bottom: var(--ifm-leading);
+}
+
+.custom-aplayer .aplayer-title {
+	color: hsl(214deg 37% 25%);
+}

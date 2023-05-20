@@ -170,6 +170,7 @@ const config = {
 		// path.resolve(__dirname, './src/plugin/plugin-baidu-push'),
 		// path.resolve(__dirname, './src/plugin/plugin-onesignal-push'),
 		// path.resolve(__dirname, './src/plugin/plugin-latest-docs'),
+		path.resolve(__dirname, './src/plugin/custom-docusaurus-plugin'),
 		'docusaurus2-dotenv',
 		[
 			'@docusaurus/plugin-content-blog',
